@@ -4,7 +4,8 @@ buildscript {
     repositories {
         mavenCentral()
         jcenter()
-    }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.3'
         classpath 'me.tatarka:gradle-retrolambda:3.5.0'
@@ -16,7 +17,9 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenCentral()
         jcenter()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     }
     ext{
         compileSdkVersion = 25
